@@ -53,7 +53,7 @@ module.exports = {
                 weight VARCHAR(50),
                 manufacturer VARCHAR(255),
                 description TEXT,
-                image TEXT,
+                image LONGTEXT,
                 createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
                 INDEX idx_userId (userId)
             );
