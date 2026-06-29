@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharpTrack ΓÇö Add Stock</title>
+    <title>SharpTrack — Add Stock</title>
     <link rel="icon" type="image/png" href="logo2.png">
     <link rel="stylesheet" href="css/design-system.css">
     <script src="https://unpkg.com/html5-qrcode"></script>
@@ -13,7 +13,7 @@
     <style>
         body { padding-bottom: 90px; }
 
-        /* ΓöÇΓöÇ BACK ROW ΓöÇΓöÇ */
+        /* ── BACK ROW ── */
         .back-row { display: flex; align-items: center; gap: 8px; padding: 16px 0 8px; }
         .back-btn {
             display: flex; align-items: center; gap: 4px; color: var(--primary); font-size: 14px;
@@ -22,14 +22,14 @@
         }
         .back-btn:active { opacity: 0.7; }
 
-        /* ΓöÇΓöÇ PAGE TITLE ΓöÇΓöÇ */
+        /* ── PAGE TITLE ── */
         .page-title { margin-bottom: 24px; }
         .page-title h1 { font-size: 24px; margin-bottom: 4px; }
         .page-title p { font-size: 14px; color: var(--muted); }
 
-        /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        /* ══════════════════════════════════
            MODE SELECTION
-           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+           ══════════════════════════════════ */
         .mode-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
         .mode-card {
             background: var(--card-bg); border: 2px solid var(--border); border-radius: var(--radius-xl);
@@ -47,9 +47,9 @@
         .mode-card h3 { font-size: 15px; font-weight: 700; color: var(--text); }
         .mode-card p { font-size: 12px; color: var(--muted); line-height: 1.4; }
 
-        /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        /* ══════════════════════════════════
            SHARED FORM STYLES
-           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+           ══════════════════════════════════ */
         .image-box {
             background: var(--card-bg); border: 2px dashed var(--border); border-radius: var(--radius-xl);
             height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -171,9 +171,9 @@
         }
         .custom-dropdown-item:hover { background: var(--primary-ghost); color: var(--primary); }
 
-        /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-           BULK WIZARD ΓÇö STEP INDICATOR
-           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+        /* ══════════════════════════════════
+           BULK WIZARD — STEP INDICATOR
+           ══════════════════════════════════ */
         .step-indicator {
             display: flex; align-items: center; justify-content: center; gap: 0;
             margin-bottom: 28px; padding: 0 8px;
@@ -192,9 +192,9 @@
         .step-label { font-size: 11px; color: var(--muted); text-align: center; flex: 1; }
         .step-label.active { color: var(--primary); font-weight: 600; }
 
-        /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        /* ══════════════════════════════════
            BULK ITEMS LIST
-           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+           ══════════════════════════════════ */
         .bulk-item-row {
             display: flex; align-items: center; gap: 10px; padding: 14px;
             background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md);
@@ -230,9 +230,9 @@
         }
         .add-item-btn:hover { background: var(--primary-light); }
 
-        /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        /* ══════════════════════════════════
            REVIEW TABLE
-           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+           ══════════════════════════════════ */
         .review-table { width: 100%; border-collapse: collapse; font-size: 13px; }
         .review-table th {
             text-align: left; padding: 10px 8px; font-size: 11px; font-weight: 700;
@@ -251,7 +251,7 @@
         .review-totals .total-label { font-size: 13px; color: var(--muted); }
         .review-totals .total-value { font-size: 18px; font-weight: 800; color: var(--primary); }
 
-        /* ΓöÇΓöÇ CROPPER MODAL ΓöÇΓöÇ */
+        /* ── CROPPER MODAL ── */
         .st-cropper-modal {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: #000; z-index: 10000; display: flex; flex-direction: column;
@@ -266,9 +266,9 @@
         .hidden { display: none !important; }
         .mb-0 { margin-bottom: 0 !important; }
         #reader { width: 100%; border-radius: var(--radius-lg); overflow: hidden; border: none; margin-bottom: 16px; }
-        /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        /* ══════════════════════════════════
            MOBILE RESPONSIVENESS
-           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+           ══════════════════════════════════ */
         @media (max-width: 480px) {
             .mode-select { grid-template-columns: 1fr; }
             .bulk-main-row { 
@@ -317,9 +317,9 @@
             <div style="height: 24px;"></div>
         </div>
 
-        <!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        <!-- ═══════════════════════════════════
              MODE SELECTION
-             ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+             ═══════════════════════════════════ -->
         <div id="modeSelection">
             <div class="page-title">
                 <h1>Add Stock</h1>
@@ -353,9 +353,9 @@
             </div>
         </div>
 
-        <!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        <!-- ═══════════════════════════════════
              SINGLE PRODUCT MODE
-             ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+             ═══════════════════════════════════ -->
         <div id="singleProductMode" class="hidden">
             <div class="page-title">
                 <h1>Add Product</h1>
@@ -393,7 +393,7 @@
 
                 <!-- PRODUCT INFORMATION -->
                 <div class="form-card">
-                    <h2>Product Information <span class="ai-badge hidden" id="aiBadge">Γ£¿ AI Filled</span></h2>
+                    <h2>Product Information <span class="ai-badge hidden" id="aiBadge">✨ AI Filled</span></h2>
                     <div class="input-group">
                         <label for="barcode">Barcode</label>
                         <div class="barcode-row">
@@ -445,16 +445,16 @@
                     <h2>Pricing &amp; Stock</h2>
                     <div class="field-row">
                         <div class="input-group">
-                            <label for="costPrice">Cost Price (Γéª) *</label>
+                            <label for="costPrice">Cost Price (₦) *</label>
                             <div class="input-wrapper">
-                                <span class="icon-left" style="font-size:16px;font-weight:700;color:var(--muted);">Γéª</span>
+                                <span class="icon-left" style="font-size:16px;font-weight:700;color:var(--muted);">₦</span>
                                 <input type="number" id="costPrice" placeholder="0.00" min="0" step="0.01" style="padding-left:44px;">
                             </div>
                         </div>
                         <div class="input-group">
-                            <label for="sellingPrice">Selling Price (Γéª) *</label>
+                            <label for="sellingPrice">Selling Price (₦) *</label>
                             <div class="input-wrapper">
-                                <span class="icon-left" style="font-size:16px;font-weight:700;color:var(--primary);">Γéª</span>
+                                <span class="icon-left" style="font-size:16px;font-weight:700;color:var(--primary);">₦</span>
                                 <input type="number" id="sellingPrice" placeholder="0.00" min="0" step="0.01" style="padding-left:44px;">
                             </div>
                         </div>
@@ -496,9 +496,9 @@
             </div>
         </div>
 
-        <!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        <!-- ═══════════════════════════════════
              BULK PRODUCTS MODE
-             ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+             ═══════════════════════════════════ -->
         <div id="bulkProductsMode" class="hidden">
             <div class="page-title">
                 <h1>Bulk Add Stock</h1>
@@ -578,7 +578,7 @@
         <!-- AI LOADING OVERLAY -->
         <div id="aiLoadingOverlay" class="ai-loading-overlay hidden">
             <div class="spinner" style="width: 40px; height: 40px; border-width: 4px;"></div>
-            <p>Analyzing with AI... Γ£¿</p>
+            <p>Analyzing with AI... ✨</p>
         </div>
     </div>
 
@@ -616,7 +616,7 @@
         
         let bulkItems = [];
 
-        // ΓöÇΓöÇ MODE SWITCHING ΓöÇΓöÇ
+        // ── MODE SWITCHING ──
         function showModeSelection() {
             currentMode = 'selection';
             document.getElementById('modeSelection').classList.remove('hidden');
@@ -651,10 +651,10 @@
             }
         }
 
-        // ΓöÇΓöÇ BULK WIZARD STEPS ΓöÇΓöÇ
+        // ── BULK WIZARD STEPS ──
         
 
-        // ΓöÇΓöÇ BULK ITEMS MANAGEMENT ΓöÇΓöÇ
+        // ── BULK ITEMS MANAGEMENT ──
         function addBulkItem(name, costPrice, sellingPrice, qty, brand, specifications, categoryName, image) {
             bulkItems.push({ 
                 name: name || '', 
@@ -765,10 +765,10 @@
             }).join('');
 
             document.getElementById('reviewTotalItems').textContent = totalItems;
-            document.getElementById('reviewTotalValue').textContent = 'Γéª' + totalValue.toLocaleString();
+            document.getElementById('reviewTotalValue').textContent = '₦' + totalValue.toLocaleString();
         }
 
-        // ΓöÇΓöÇ UNIT LOGIC ΓöÇΓöÇ
+        // ── UNIT LOGIC ──
         const CATEGORY_UNIT_MAP = {
             'beverage':'litres','beverages':'litres','soft drink':'litres','soda':'litres',
             'juice':'litres','water':'litres','wine':'litres','cooking oil':'litres','oil':'litres',
@@ -808,7 +808,7 @@
             el.classList.add('active');
         }
 
-        // ΓöÇΓöÇ CATEGORY DROPDOWN ΓöÇΓöÇ
+        // ── CATEGORY DROPDOWN ──
         let categoryList = [];
 
         async function loadCategories() {
@@ -843,7 +843,7 @@
             if (dropdown && !dropdown.contains(e.target)) dropdown.classList.remove('open');
         });
 
-        // ΓöÇΓöÇ CROPPER LOGIC ΓöÇΓöÇ
+        // ── CROPPER LOGIC ──
         async function initCrop(event, mode) {
             const file = event.target.files[0];
             if (!file) return;
@@ -887,7 +887,7 @@
             }
         }
 
-        // ΓöÇΓöÇ IMAGE HANDLING ΓöÇΓöÇ
+        // ── IMAGE HANDLING ──
         function setPreviewImage(base64Str) {
             aiImageBase64 = base64Str;
             const img = document.getElementById('imagePreview');
@@ -915,7 +915,7 @@
             });
         }
 
-        // ΓöÇΓöÇ BARCODE SCANNER ΓöÇΓöÇ
+        // ── BARCODE SCANNER ──
         function startBarcodeScanner() {
             document.getElementById('singleFormContainer')?.classList.add('hidden');
             
@@ -988,7 +988,7 @@
                         if (p.costPrice !== null && !document.getElementById('costPrice').value) document.getElementById('costPrice').value = p.costPrice;
                         if (p.sellingPrice !== null && !document.getElementById('sellingPrice').value) document.getElementById('sellingPrice').value = p.sellingPrice;
                         if (p.unit) autoSelectUnit(p.unit);
-                        showToast('success', 'Found! ≡ƒôª', 'Product details auto-filled.');
+                        showToast('success', 'Found! 📦', 'Product details auto-filled.');
                         return;
                     }
                 }
@@ -1011,7 +1011,7 @@
             }
         }
 
-        // ΓöÇΓöÇ AI SCANNER (SINGLE) ΓöÇΓöÇ
+        // ── AI SCANNER (SINGLE) ──
         function setAIStatus(type, title, message) {
             const banner = document.getElementById('aiStatusBanner');
             const text = document.getElementById('aiStatusText');
@@ -1064,7 +1064,7 @@
                     }
                     setAIStatus(confidence >= 0.8 ? 'success' : 'warning', 'AI Scan', confidence >= 0.8 ? 'Product detected!' : 'Please verify info');
                 } else {
-                    setAIStatus('error', 'Low Confidence', 'Could not detect ΓÇö fill manually');
+                    setAIStatus('error', 'Low Confidence', 'Could not detect — fill manually');
                 }
                 saveScanRecord(base64Str, data, confidence);
             } catch (error) {
@@ -1077,7 +1077,7 @@
             }
         }
 
-        // ΓöÇΓöÇ AI SCANNER (BULK) ΓöÇΓöÇ
+        // ── AI SCANNER (BULK) ──
         async function processBulkAIImage(base64Str) {
             const overlay = document.getElementById('aiLoadingOverlay');
             overlay.classList.remove('hidden');
@@ -1120,7 +1120,7 @@
             }
         }
 
-        // ΓöÇΓöÇ RECEIPT SCANNER ΓöÇΓöÇ
+        // ── RECEIPT SCANNER ──
         async function processReceiptImage(base64Str) {
             const overlay = document.getElementById('aiLoadingOverlay');
             overlay.classList.remove('hidden');
@@ -1180,7 +1180,7 @@
             } catch (e) { console.warn('Could not save scan record:', e); }
         }
 
-        // ΓöÇΓöÇ SUBMIT: SINGLE ΓöÇΓöÇ
+        // ── SUBMIT: SINGLE ──
         async function handleSubmit() {
             const name = document.getElementById('productName').value.trim();
             const sellingPrice = document.getElementById('sellingPrice').value;
@@ -1210,7 +1210,7 @@
                         weight: weight || null, categoryName: categoryName || null, image: aiImageBase64 || null
                     })
                 });
-                showToast('success', 'Product Saved! ≡ƒôª', `${name} has been added.`);
+                showToast('success', 'Product Saved! 📦', `${name} has been added.`);
                 setTimeout(() => location.reload(), 1500);
             } catch (err) {
                 showToast('error', 'Failed', err.message);
@@ -1219,7 +1219,7 @@
             }
         }
 
-        // ΓöÇΓöÇ SUBMIT: BULK ΓöÇΓöÇ
+        // ── SUBMIT: BULK ──
         async function handleBulkSubmit() {
             const validItems = bulkItems.filter(it => it.name.trim() && parseFloat(it.sellingPrice) > 0 && parseInt(it.quantity) > 0);
             if (validItems.length === 0) {
@@ -1256,7 +1256,7 @@
                 await Promise.all(promises);
 
                 if (saved > 0) {
-                    showToast('success', 'Inventory Updated! ≡ƒôª', `${saved} product(s) saved successfully.`);
+                    showToast('success', 'Inventory Updated! 📦', `${saved} product(s) saved successfully.`);
                 }
                 if (failed > 0) {
                     showToast('warning', 'Partial Save', `${failed} product(s) failed to save.`);
