@@ -12,8 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Blocking Auth Check -->
+    <script>
+        if (!localStorage.getItem('admin_token')) {
+            window.location.replace('login.html');
+        }
+    </script>
 </head>
-<body>
+<body style="display: none;">
+    <script>
+        // Only show body if we didn't redirect
+        if (localStorage.getItem('admin_token')) {
+            document.body.style.display = 'block';
+        }
+    </script>
     <div class="app-container">
         <!-- FIXED SIDEBAR -->
         <aside class="sidebar" id="sidebar">

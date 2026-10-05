@@ -22,20 +22,6 @@ Allow: /more.html
 # Block private/sensitive areas
 Disallow: /onboarding.html
 Disallow: /admin/
-Disallow: /api/
-Disallow: /js/
-Disallow: /css/
-Disallow: /middleware/
-Disallow: /backend/
-Disallow: /prisma/
-Disallow: /lib/
-Disallow: /services/
-Disallow: /node_modules/
-Disallow: /.env
-Disallow: /.env.local
-Disallow: /.git/
-Disallow: /.vercel/
-Disallow: /scratch_*
 
 # ── Google Search & Google AI (Gemini) ──
 User-agent: Googlebot

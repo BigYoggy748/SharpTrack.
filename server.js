@@ -9,12 +9,20 @@ const app = express();
 // Trust proxy settings (required for accurate client IP detection behind Netlify/Render proxies)
 app.set('trust proxy', 1);
 
+// Disable x-powered-by header
+app.disable('x-powered-by');
+
 // Custom HTTP Security Headers
 app.use((req, res, next) => {
     res.setHeader('X-Frame-Options', 'DENY');
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
     res.setHeader('Content-Security-Policy', "default-src 'self' https:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:;");
+    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+    res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+    res.setHeader('Cross-Origin-Resource-Policy', 'same-site');
+    res.setHeader('Permissions-Policy', 'camera=(self), microphone=(), geolocation=()');
+    res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
     next();
 });
 
@@ -34,8 +42,11 @@ if (process.env.FRONTEND_URL) {
 
 app.use(cors({
     origin: (origin, callback) => {
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin || allowedOrigins.includes(origin)) {
+        // Allow requests with no origin without emitting a wildcard CORS header
+        if (!origin) {
+            return callback(null, false);
+        }
+        if (allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
@@ -89,6 +100,8 @@ app.use('/api/auth/register-email', authLimiter);
 app.use('/api/auth/login-email', authLimiter);
 app.use('/api/otp/send', otpLimiter);
 app.use('/api/otp/send-email', otpLimiter);
+app.use('/api/otp/verify', otpLimiter);
+app.use('/api/otp/verify-email', otpLimiter);
 app.use('/api/ai/', aiLimiter);
 app.use('/api/chat', aiLimiter);
 app.use('/api/products', (req, res, next) => {

@@ -1,0 +1,19 @@
+# Block backend code and sensitive config from Vercel deployments
+/prisma/
+/lib/
+/services/
+/middleware/
+/backend/
+/routes/
+/api/
+server.js
+auth.js
+otp.js
+adminRoutes.js
+products.js
+sales.js
+store.js
+.env*
+scratch_*
+package.json
+package-lock.json
